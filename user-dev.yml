@@ -1,0 +1,23 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: microservice-itp-user
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservice?characterEncoding=UTF8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: C1h2e3n4
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    database: mysql
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka
+  instance:
+    prefer-ip-address: true
